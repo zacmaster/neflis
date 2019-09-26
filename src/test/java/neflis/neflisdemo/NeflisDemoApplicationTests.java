@@ -1,4 +1,4 @@
-package neflis.backelarre.neflisdemo;
+package neflis.neflisdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
