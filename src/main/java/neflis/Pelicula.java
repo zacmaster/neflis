@@ -24,6 +24,7 @@ public class Pelicula extends ContenidoUnitario{
     }
     //protected Boolean generoMasVisto() {
      //   return generoMasVisto();
+
     public String getActor(){return actores;}}
     //public Boolean actorActuo(Contenido contenidoVisto){
 

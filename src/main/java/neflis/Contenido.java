@@ -1,6 +1,6 @@
 package neflis;
 
-interface Contenido {
+public interface Contenido {
     public String genero();
     //public Boolean actorActuo();
     public Integer duracion();

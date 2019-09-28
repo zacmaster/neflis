@@ -71,7 +71,8 @@ public class Main {
 
         yaz.generosqueVio().stream().forEach( genero-> System.out.println(genero +" generosss que vio"));
         System.out.println( yaz.generosqueVio() );
-        /** ejercicio 5**/
+
+        /** ejercicio 5 ...**/
 
     }}
 
