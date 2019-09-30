@@ -8,6 +8,28 @@ public class Serie implements Contenido {
     public String genero;
     public Integer duracion;
 
+    private Integer id;
+    private String title;
+    private Integer year;
+    private Integer duration;
+    private String genre;
+    private String directors;
+    private String actors;
+    private String plot;
+    private List<Temporada> seasons;
+
+    public Serie (Integer id, String title, Integer year, Integer duration, String genre, String directors, String actors, String plot, List<Temporada> seasons) {
+        this.id = id;
+        this.title = title;
+        this.year = year;
+        this.duration = duration;
+        this.genre = genre;
+        this.directors = directors;
+        this.actors = actors;
+        this.plot = plot;
+        this.seasons=seasons;
+    }
+
     public Serie(String nombreSerie, List<Temporada> temporadas, String genero) {
         this.nombreSerie = nombreSerie;
         this.temporadas = temporadas;

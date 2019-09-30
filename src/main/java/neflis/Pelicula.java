@@ -6,6 +6,27 @@ public class Pelicula extends ContenidoUnitario{
     public Integer duracion;
     public Boolean actorActuo;
 
+    private Integer id;
+    private String title;
+    private Integer year;
+    private Integer duration;
+    private String genre;
+    private String directors;
+    private String actors;
+    private String plot;
+
+    public Pelicula(Integer id, String title, Integer year, Integer duration, String genre, String directors, String actors, String plot) {
+        this.id = id;
+        this.title = title;
+        this.year = year;
+        this.duration = duration;
+        this.genre = genre;
+        this.directors = directors;
+        this.actors = actors;
+        this.plot = plot;
+    }
+
+
     protected Pelicula(Integer duracion, String actores, String genero){
         this.duracion=duracion;
         this.actores=actores;

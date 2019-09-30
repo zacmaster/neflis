@@ -7,4 +7,3 @@ public interface Contenido {
     public Boolean fueVistoCompletaX(Usuario usuario);
 
 }
-
