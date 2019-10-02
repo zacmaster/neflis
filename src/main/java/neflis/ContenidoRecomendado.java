@@ -1,4 +1,4 @@
-package neflis.neflisdemo;
+package neflis;
 
 import neflis.ContenidoUnitario;
 import neflis.Usuario;
