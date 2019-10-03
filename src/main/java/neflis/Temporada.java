@@ -9,7 +9,7 @@ public class Temporada implements Contenido {
     private Integer duracion;
     public String genero;
 
-    private String id;
+   /* private String id;
     private Integer number;
     private Integer duration;
     private List<Capitulo> episodes;
@@ -19,7 +19,7 @@ public class Temporada implements Contenido {
         this.number=number;
         this.duration=duration;
         this.episodes=episodes;
-    }
+    }*/
 
     public Temporada(Integer numTemp, List<Capitulo>capitulo){
         this.capitulo=capitulo;

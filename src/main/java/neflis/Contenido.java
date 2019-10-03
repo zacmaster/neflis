@@ -5,5 +5,4 @@ public interface Contenido {
     //public Boolean actorActuo();
     public Integer duracion();
     public Boolean fueVistoCompletaX(Usuario usuario);
-
 }

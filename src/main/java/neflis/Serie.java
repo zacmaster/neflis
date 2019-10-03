@@ -8,7 +8,7 @@ public class Serie implements Contenido {
     public String genero;
     public Integer duracion;
 
-    private Integer id;
+    /*private Integer id;
     private String title;
     private Integer year;
     private Integer duration;
@@ -28,7 +28,7 @@ public class Serie implements Contenido {
         this.actors = actors;
         this.plot = plot;
         this.seasons=seasons;
-    }
+    }*/
 
     public Serie(String nombreSerie, List<Temporada> temporadas, String genero) {
         this.nombreSerie = nombreSerie;

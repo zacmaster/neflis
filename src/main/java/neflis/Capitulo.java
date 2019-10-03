@@ -11,10 +11,11 @@ public class Capitulo extends ContenidoUnitario{
     private Integer duration;
     private String guest_actors;
 
-    protected Capitulo(String numeroCap, String actores, Integer duracion) {
+    protected Capitulo(String numeroCap, String actores, Integer duracion, String guest_actors) {
         this.actores=actores;
         this.duracion=duracion;
-        this.numeroCap=numeroCap;}
+        this.numeroCap=numeroCap;
+        this.guest_actors=guest_actors;}
 
 
     public void setSerie(Serie serie){this.serie=serie;}
