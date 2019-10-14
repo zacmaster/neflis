@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class ContenidoRecomendado {
     private List<ContenidoUnitario> contenidosDestacados= new ArrayList<>();
-    private Usuario usuario;
+    public Usuario usuario;
     public Contenido contenido;
 
     public List<Contenido> contenidosIncompletos(){ return

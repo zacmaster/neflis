@@ -31,13 +31,13 @@ public class ContenidoStorage {
             throw new RuntimeException(e);}}
 
 
-      private ContenidoApi getContents()
+      private String getContents()
     {
         final String uri = "http://www.omdbapi.com/?i=tt3896198&apikey=4823c028";
 
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class);
-        return contents();
+        return result;
 
     }
       /* public void agregarContentss (List <ContenidoApi> contents){

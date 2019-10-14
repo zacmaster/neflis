@@ -2,29 +2,19 @@ package neflis;
 
 public class Capitulo extends ContenidoUnitario{
     protected Integer duracion;
-   // protected String genero;
-    protected String numeroCap;
-    public Serie serie;
+    protected Integer numeroCap;
+    protected Serie serie;
+    protected String genero;
 
-    private String id;
-    private Integer number;
-    private Integer duration;
-    private String guest_actors;
-
-    protected Capitulo(String numeroCap, String actores, Integer duracion, String guest_actors) {
+    public Capitulo(Integer numeroCap, String actores) {
         this.actores=actores;
-        this.duracion=duracion;
-        this.numeroCap=numeroCap;
-        this.guest_actors=guest_actors;}
+        this.numeroCap=numeroCap;}
 
 
     public void setSerie(Serie serie){this.serie=serie;}
-    /*protected Capitulo(Temporada temporada){this.temporada=temporada;}*/
-    public String genero;
 
     public Boolean fueVistoCompletaX(Usuario usuario){
-        return usuario.getContenido().contains( usuario );}
-
+        return usuario.getContenido().contains( this );}
 
     public void setGenero(String genero) {
         this.genero = genero;}

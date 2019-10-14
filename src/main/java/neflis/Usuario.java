@@ -5,9 +5,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Usuario {
-    private List<Contenido> contenidoVisto=new ArrayList<>(  );
-    private List<String> generosqueVio;
-    private Contenido contenido;
+    public List<Contenido> contenidoVisto=new ArrayList<>(  );
+    public List<String> generosqueVio;
+    //public Contenido contenido;
+    //public Contenido contenidoVisto;
 
 
     /**Aca se le dice al usuario que contenido vio completo**/
@@ -15,11 +16,13 @@ public class Usuario {
     public Boolean vioContenidoCompleto(Contenido contenido) {
         return this.contenidoVisto.contains( contenido );
     }
-    public List<Contenido> getContenido() {
-        return contenidoVisto;
-    }
+
     public void setContenido(List<Contenido> contenidoVisto) {
         this.contenidoVisto = contenidoVisto;
+    }
+
+    public List<Contenido> getContenido() {
+        return contenidoVisto;
     }
     /** generos que ve el usuario**/
     public List<String> generosqueVio(){

@@ -4,22 +4,11 @@ import java.util.List;
 
 
 public class Temporada implements Contenido {
-    private List<Capitulo> capitulo;
+    public List<Capitulo> capitulo;
     Integer numTemp;
-    private Integer duracion;
+    public Integer duracion;
     public String genero;
 
-   /* private String id;
-    private Integer number;
-    private Integer duration;
-    private List<Capitulo> episodes;
-
-    public Temporada(String id, Integer number, Integer duration, List<Capitulo> episodes) {
-        this.id = id;
-        this.number=number;
-        this.duration=duration;
-        this.episodes=episodes;
-    }*/
 
     public Temporada(Integer numTemp, List<Capitulo>capitulo){
         this.capitulo=capitulo;
@@ -27,6 +16,7 @@ public class Temporada implements Contenido {
     }
     public Serie serie;
     public void setSerie(Serie serie){this.serie=serie;}
+
     public Boolean fueVistoCompletaX(Usuario usuario) {
         return this.capitulo.stream().
                 allMatch( capitulo -> capitulo.fueVistoCompletaX( usuario ) );
