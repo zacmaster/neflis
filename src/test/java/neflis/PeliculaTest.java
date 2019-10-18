@@ -19,8 +19,8 @@ public class PeliculaTest {
     @BeforeEach
     void setUp(){
     usuarioA= new Usuario();
-    pelicula1=new Pelicula(180,"actor1", "Drama");
-    pelicula2= new Pelicula(160, "actor2", "Comedia");
+    pelicula1=new Pelicula("actor1");
+    pelicula2= new Pelicula("actor2");
     List<Contenido>contenidoVisto= new ArrayList<>();
     contenidoVisto.add(pelicula1);
     usuarioA.setContenido(contenidoVisto);
