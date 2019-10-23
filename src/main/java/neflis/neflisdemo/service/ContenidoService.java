@@ -23,9 +23,10 @@ public class ContenidoService {
         this.contenidoStorage = contenidoStorage;
     }
 
-    private List<ContenidoApi> contentsList;
+    public List<ContenidoApi> contentsList;
 
     public List<ContenidoApi> getContentsList() {
+        contentsList=contenidoStorage.contents();
         if (contentsList == null) {
             contentsList = new ArrayList<>();
         }
@@ -35,21 +36,19 @@ public class ContenidoService {
         this.contentsList = contentsList;
     }
 
-    public ContenidoApi contents() {
-        return
-                contents = contenidoStorage.contents();
-    }
+    /*public ContenidoApi contents() {
+        return contents = contenidoStorage.contents();*/
 
     public ContenidoApi getcontents() {
         return contents;
     }
 
     public ContenidoApi agregarContents(ContenidoApi newcontents) {
-        /*long count = contents.stream().count();
-        int i=contents.stream().skip(count - 1).findFirst().get().getId();
-        newcontents.setId(contents.stream().hashCode());
-        getcontents().add(newcontents);*/
-        //this.contenidoStorage.agregarContentss(contents);
+        long count = contentsList.stream().count();
+        int i=contentsList.stream().skip(count - 1).findFirst().get().getId();
+        newcontents.setId(i+1);
+        getContentsList().add(newcontents);
+        this.contenidoStorage.agregarContentss(contentsList);
         return newcontents;
     }
 

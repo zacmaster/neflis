@@ -21,17 +21,16 @@ public class ContenidoStorage {
     private ObjectMapper objectMapper;
     public ContenidoStorage(ObjectMapper objectMapper){this.objectMapper=objectMapper;}
 
-     public ContenidoApi contents(){
+     public List<ContenidoApi> contents(){
         try { return objectMapper.readValue(
-             new URL("http://www.omdbapi.com/?i=tt3896198&apikey=4823c028") , // + URLEncoder.encode(selectedItem, "UTF-8")).openStream());
-                new TypeReference<List<Contenido>>() {});
-
+             new File("/home/yaz/neflis/src/main/resources/Contents.json") , // + URLEncoder.encode(selectedItem, "UTF-8")).openStream());
+                new TypeReference<List<ContenidoApi>>() {});
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException(e);}}
 
 
-      private String getContents()
+     /* private String getContents()
     {
         final String uri = "http://www.omdbapi.com/?i=tt3896198&apikey=4823c028";
 
@@ -39,13 +38,13 @@ public class ContenidoStorage {
         String result = restTemplate.getForObject(uri, String.class);
         return result;
 
-    }
-      /* public void agregarContentss (List <ContenidoApi> contents){
+    }*/
+     public void agregarContentss (List <ContenidoApi> contents){
         try {
             objectMapper.writeValue(
-                    new File("src/main/resources/contents.json"), contents);
+                    new File("src/main/resources/Contents.json"), contents);
         } catch (IOException e) {
             e.printStackTrace();
-            throw new RuntimeException(e);*/
+            throw new RuntimeException(e);}}
 
         }

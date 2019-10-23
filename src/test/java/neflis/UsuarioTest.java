@@ -66,7 +66,7 @@ public class UsuarioTest {
         assertFalse(usuarioA.vioContenidoCompleto(serie2));
 
     }
-    @Test
+   /* @Test
     void testMinVistosPorGenero(){
         serie1=mock(Serie.class);
         capitulo1=mock(Capitulo.class);
@@ -78,7 +78,7 @@ public class UsuarioTest {
         when(temporada1.duracion()).thenReturn(58);
         //when(capitulo2.duracion()).thenReturn(57);
         //assertEquals(900, usuarioA.minVistosxGenero("Comedia").intValue());
-        assertEquals(500, serie1.duracion().intValue());}
+        assertEquals(500, serie1.duracion().intValue());}*/
 
     @Test
     void testGenerosqueVioPorContenido(){

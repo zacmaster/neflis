@@ -9,25 +9,26 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 
-@Controller
+@RestController
 public class ContenidoController {
     private ContenidoService contenidoService;
     public ContenidoController(ContenidoService contenidoService){
         this.contenidoService=contenidoService;
     }
 
-    /*@GetMapping("/contents")
-    public ContenidoApi contents(){
-        return contenidoService.contents();
+    @GetMapping("/contents")
+    public List<ContenidoApi> contents(){
+        return contenidoService.getContentsList();
     }
     @PostMapping("/contents")
     public ContenidoApi addContent(@RequestBody ContenidoApi contents){
         return
-                contenidoService.agregarContents(contents);}*/
+                contenidoService.agregarContents(contents);}}
 
-    @RequestMapping(value = "/contents", produces = MediaType.APPLICATION_JSON_VALUE,  method = RequestMethod.GET)
+    /*@RequestMapping(value = "/contents", produces = MediaType.APPLICATION_JSON_VALUE,  method = RequestMethod.GET)
     public String getAllContentsJSON (Model model)
     {
         model.addAttribute("contents", contenidoService.getContentsList() );
@@ -39,4 +40,4 @@ public class ContenidoController {
         System.out.println(contents);
         return new ResponseEntity(HttpStatus.CREATED);
     }
-}
+}*/
