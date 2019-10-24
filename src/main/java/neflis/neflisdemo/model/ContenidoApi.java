@@ -9,112 +9,92 @@ import java.util.List;
 
 public class ContenidoApi implements Serializable {
         private Integer id;
-        private String Title;
-        private String Year;
-        private String Runtime;
-        private String Genre;
-        private String Director;
-        private String Actors;
-        private String Plot;
+        private String title;
+        private String year;
+        private String runtime;
+        private String genre;
+        private String director;
+        private String actors;
+        private String plot;
         private String Season;
 
         private List<Pelicula> peliculas;
         private List<Serie> series;
 
-        public ContenidoApi(){};
+        public ContenidoApi(){}
 
-        public ContenidoApi(Integer id, String Title, String Year, String Runtime, String Genre, String Director, String Actors, String Plot) {
-            this.id = id;
-            this.Title = Title;
-            this.Year = Year;
-            this.Runtime = Runtime;
-            this.Genre = Genre;
-            this.Director = Director;
-            this.Actors = Actors;
-            this.Plot = Plot;
-        }
-        /*public ContenidoApi(Integer id, String title, Integer year, Integer duration, String genre, String directors,
-                         String actors, String plot, String season) {
-            this.id = id;
-            this.title = title;
-            this.year = year;
-            this.duration = duration;
-            this.genre = genre;
-            this.directors = directors;
-            this.actors = actors;
-            this.plot = plot;
-            this.season=season;
-        }*/
+        public ContenidoApi(Integer id, String title, String year, String runtime, String genre, String director, String actors, String plot) {
+        this.id = id;
+        this.title = title;
+        this.year = year;
+        this.runtime = runtime;
+        this.genre = genre;
+        this.director = director;
+        this.actors = actors;
+        this.plot = plot;
+    }
 
-        public Integer getId() {
-            return id.hashCode();
-        }
+    public Integer getId() {
+        return id;
+    }
 
-        public void setId(Integer id) {
-            this.id = id;
-        }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-        public String getTitle() {
-            return Title;
-        }
+    public String getTitle() {
+        return title;
+    }
 
-        public void setTitle(String Title) {
-            this.Title = Title;
-        }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-        public String  getYear() {
-            return Year;
-        }
+    public String getYear() {
+        return year;
+    }
 
-        public void setYear(String Year) {
-            this.Year = Year;
-        }
+    public void setYear(String year) {
+        this.year = year;
+    }
 
-        public String getRuntime() {
-            return Runtime;
-        }
+    public String getRuntime() {
+        return runtime;
+    }
 
-        public void setRuntime(String Runtime) {
-            this.Runtime = Runtime;
-        }
+    public void setRuntime(String runtime) {
+        this.runtime = runtime;
+    }
 
-        public String getGenre() {
-            return Genre;
-        }
+    public String getGenre() {
+        return genre;
+    }
 
-        public void setGenre(String genre) {
-            this.Genre = Genre;
-        }
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 
-        public String getDirectors() {
-            return Director;
-        }
+    public String getDirector() {
+        return director;
+    }
 
-        public void setDirectors(String Director) {
-            this.Director = Director;
-        }
+    public void setDirector(String director) {
+        this.director = director;
+    }
 
-        public String getActors() {
-            return Actors;
-        }
+    public String getActors() {
+        return actors;
+    }
 
-        public void setActors(String Actors) {
-            this.Actors = Actors;
-        }
+    public void setActors(String actors) {
+        this.actors = actors;
+    }
 
-        public String getPlot() {
-            return Plot;
-        }
+    public String getPlot() {
+        return plot;
+    }
 
-        public void setPlot(String plot) {
-            this.Plot = Plot;
-        }
+    public void setPlot(String plot) {
+        this.plot = plot;
+    }}
 
-        /*public String getSeason() {
-            return season;
-        }
-
-        public void setSeason(String season) {
-            this.season = season;
-        }*/
-}

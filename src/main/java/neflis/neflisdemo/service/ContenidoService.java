@@ -14,30 +14,29 @@ import java.util.List;
 @Service
 public class ContenidoService {
     public ContenidoStorage contenidoStorage;
-    public ContenidoApi contents;
-
-    public ContenidoService() {
-    }
+    private List<ContenidoApi> contentsList;
 
     public ContenidoService(ContenidoStorage contenidoStorage) {
-        this.contenidoStorage = contenidoStorage;
-    }
+        this.contenidoStorage = contenidoStorage; }
 
-    public List<ContenidoApi> contentsList;
+
 
     public List<ContenidoApi> getContentsList() {
-        contentsList=contenidoStorage.contents();
-        if (contentsList == null) {
+        contentsList = contenidoStorage.contents();
+     return contentsList;
+        /*if (contentsList == null) {
             contentsList = new ArrayList<>();
         }
         return contentsList;
+    }*/
     }
+
     public void setContentsList(List<ContenidoApi> contentsList) {
         this.contentsList = contentsList;
     }
 
     /*public ContenidoApi contents() {
-        return contents = contenidoStorage.contents();*/
+        return contents = contenidoStorage.contents();
 
     public ContenidoApi getcontents() {
         return contents;
@@ -51,5 +50,5 @@ public class ContenidoService {
         this.contenidoStorage.agregarContentss(contentsList);
         return newcontents;
     }
-
+*/
 }
