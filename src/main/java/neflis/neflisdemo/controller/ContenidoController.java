@@ -1,5 +1,6 @@
 package neflis.neflisdemo.controller;
 
+import neflis.neflisdemo.model.Contenido;
 import neflis.neflisdemo.model.ContenidoApi;
 import neflis.neflisdemo.service.ContenidoService;
 import org.springframework.web.bind.annotation.*;
@@ -15,8 +16,8 @@ public class ContenidoController {
     }
 
     @GetMapping("/contents")
-    public List<ContenidoApi> contents(){
-        return contenidoService.getContentsList();
+    public List<Contenido> contents(){
+        return contenidoService.cargarContenidosIniciales();
     }}
     /*@PostMapping("/contents")
     public ContenidoApi addContent(@RequestBody ContenidoApi contents){

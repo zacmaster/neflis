@@ -38,9 +38,9 @@ public class ContenidoService {
 
 
 
-    private ArrayList<Contenido> cargarContenidosIniciales(){
+    public List<Contenido> cargarContenidosIniciales(){
 
-        ArrayList<Contenido> movies = new ArrayList<>();
+        List<Contenido> movies = new ArrayList<>();
 
         String movie1URL = Util.URL_API + "?t=braveheart&apikey=" +  Util.API_KEY;
         String movie2URL = Util.URL_API + "?t=titanic&apikey=" +  Util.API_KEY;
@@ -75,9 +75,10 @@ public class ContenidoService {
             Contenido c = om.readValue(json,Contenido.class);
             return c;
         } catch (IOException e) {
+            //log + tirar la excepcion
             e.printStackTrace();
+            throw new RuntimeException("There was an error reading content", e);
         }
-        return null;
     }
 
 

@@ -9,10 +9,10 @@ public class Contenido {
     private String duration;
     private String genre;
     private String director;
-    private ArrayList<String> actors;
+    private String actors;
     private String plot;
 
-    public Contenido(int id, String title, String year, String duration, String genre, String director, ArrayList<String> actors, String plot) {
+    public Contenido(int id, String title, String year, String duration, String genre, String director, String actors, String plot) {
         this.id = id;
         this.title = title;
         this.year = year;
@@ -73,11 +73,11 @@ public class Contenido {
         this.director = director;
     }
 
-    public ArrayList<String> getActors() {
+    public String getActors() {
         return actors;
     }
 
-    public void setActors(ArrayList<String> actors) {
+    public void setActors(String actors) {
         this.actors = actors;
     }
 
