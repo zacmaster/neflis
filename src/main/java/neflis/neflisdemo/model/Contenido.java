@@ -1,18 +1,24 @@
 package neflis.neflisdemo.model;
 
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 import java.util.ArrayList;
 
-public class Contenido {
-    private int id;
+public abstract class Contenido {
+    private String id;
     private String title;
     private String year;
+
+    @JsonSetter("Runtime")
     private String duration;
+
     private String genre;
     private String director;
+//    private ArrayList<String> actors;
     private String actors;
     private String plot;
 
-    public Contenido(int id, String title, String year, String duration, String genre, String director, String actors, String plot) {
+    public Contenido(String id, String title, String year, String duration, String genre, String director, String actors, String plot) {
         this.id = id;
         this.title = title;
         this.year = year;
@@ -25,13 +31,6 @@ public class Contenido {
 
     public Contenido(){}
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -73,14 +72,6 @@ public class Contenido {
         this.director = director;
     }
 
-    public String getActors() {
-        return actors;
-    }
-
-    public void setActors(String actors) {
-        this.actors = actors;
-    }
-
     public String getPlot() {
         return plot;
     }
@@ -89,10 +80,11 @@ public class Contenido {
         this.plot = plot;
     }
 
+    public String getActors() {
+        return actors;
+    }
 
-    //    private ArrayList<Season> seasons; TO-DO
-
-
-
-
+    public void setActors(String actors) {
+        this.actors = actors;
+    }
 }

@@ -3,6 +3,7 @@ package neflis.neflisdemo.controller;
 import neflis.neflisdemo.model.Contenido;
 import neflis.neflisdemo.model.ContenidoApi;
 import neflis.neflisdemo.service.ContenidoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,15 +11,19 @@ import java.util.List;
 
 @RestController
 public class ContenidoController {
+    @Autowired
     private ContenidoService contenidoService;
-    public ContenidoController(ContenidoService contenidoService){
-        this.contenidoService=contenidoService;
+
+    public ContenidoController(ContenidoService contenidoService) {
+        this.contenidoService = contenidoService;
     }
 
     @GetMapping("/contents")
-    public List<Contenido> contents(){
-        return contenidoService.cargarContenidosIniciales();
-    }}
+    public List<Contenido> contents() {
+        return contenidoService.getContenidos();
+    }
+//        return contenidoService.cargarContenidosIniciales();
+//    }}
     /*@PostMapping("/contents")
     public ContenidoApi addContent(@RequestBody ContenidoApi contents){
         return contenidoService.agregarContents(contents);}}
@@ -36,3 +41,4 @@ public class ContenidoController {
         return new ResponseEntity(HttpStatus.CREATED);
     }
 }*/
+}
