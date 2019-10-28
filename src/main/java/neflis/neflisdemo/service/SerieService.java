@@ -1,5 +1,6 @@
 package neflis.neflisdemo.service;
 
+import neflis.neflisdemo.model.Episode;
 import neflis.neflisdemo.model.Season;
 import neflis.neflisdemo.model.Serie;
 import neflis.neflisdemo.util.CustomObjectMapper;
@@ -52,10 +53,10 @@ public class SerieService {
     private void configureSerie(String urlSerie) {
         Serie serie = getSerie(urlSerie);
         ArrayList<Season> seasons = new ArrayList<>();
-        int counter = 1;
-        while (counter <= serie.getNumberOfSeasons()) {
-            seasons.add(getSeason(urlSerie + "&season=" + counter));
-            counter++;
+        for (int i = 1; i <= serie.getNumberOfSeasons(); i++){
+            Season season = getSeason(urlSerie + "&season=" + i);
+            seasons.add(season);
+
         }
         serie.setSeasons(seasons);
         this.series.add(serie);
@@ -67,6 +68,18 @@ public class SerieService {
         CustomObjectMapper om = new CustomObjectMapper();
         try {
             return  om.readValue(json, Season.class);
+        } catch (IOException e) {
+            //log + tirar la excepcion
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Episode getEpisode(String url){
+        String json = Util.getResponse(url).getBody().toString();
+        CustomObjectMapper om = new CustomObjectMapper();
+        try {
+            return  om.readValue(json, Episode.class);
         } catch (IOException e) {
             //log + tirar la excepcion
             e.printStackTrace();
